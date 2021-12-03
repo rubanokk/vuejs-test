@@ -1,0 +1,39 @@
+.data-table-block {
+  margin: 24px 0;
+  border: 1px solid black;
+
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__head {
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__block {
+    @include desktop {
+      border: 1px solid black;
+    }
+  }
+
+  &__block:first-child &__head {
+    display: flex;
+  }
+
+  &__cell {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px;
+    text-align: center;
+
+    @include desktop {
+      border: none;
+    }
+  }
+}
